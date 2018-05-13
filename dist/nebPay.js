@@ -1,4 +1,4 @@
- require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
 var payUrl = "https://pay.nebulas.io/api/pay";
@@ -103,63 +103,63 @@ var Config = require("./config");
 var openExtension = require("./extensionUtils.js");
 
 var Pay = function (appKey, appSecret) {
-	// TODO: currently not use
-	this.appKey = appKey;
-	this.appSecret = appSecret;
+    // TODO: currently not use
+    this.appKey = appKey;
+    this.appSecret = appSecret;
 };
 
 Pay.prototype = {
-	submit: function (currency, to, value, payload, options) {
-		options.serialNumber = Utils.randomCode(32);
-		value = value || "0";
-		var amount = new BigNumber(value).times("1000000000000000000"); //10^18
-		var params = {
-			serialNumber: options.serialNumber,
-			goods: options.goods,
-			pay: {
-				currency: currency,
-				to: to,
-				value: amount.toString(10),
-				payload: payload
-			},
-			callback: options.callback,
-			listener: options.listener,
-			nrc20: options.nrc20
-		};
+    submit: function (currency, to, value, payload, options) {
+        options.serialNumber = Utils.randomCode(32);
+        value = value || "0";
+        var amount = new BigNumber(value).times("1000000000000000000"); //10^18
+        var params = {
+            serialNumber: options.serialNumber,
+            goods: options.goods,
+            pay: {
+                currency: currency,
+                to: to,
+                value: amount.toString(10),
+                payload: payload
+            },
+            callback: options.callback,
+            listener: options.listener,
+            nrc20: options.nrc20
+        };
 
-		openExtension(params);
-		openApp(params, options);
+        openExtension(params);
+        openApp(params, options);
 
-		return options.serialNumber;
-	}
+        return options.serialNumber;
+    }
 };
 
 // function openExtension(params) {
-// 	// TODO: start chrom extension
-// 	if (typeof window !== "undefined") {
-// 		window.postMessage(params,"*");
-// 	}
+//  // TODO: start chrom extension
+//  if (typeof window !== "undefined") {
+//      window.postMessage(params,"*");
+//  }
 // }
 
 function openApp(params, options) {
-	// if (typeof window !== "undefined") {
-	//params.callback = Config.payUrl;
-	var appParams = {
-		category: "jump",
-		des: "confirmTransfer",
-		pageParams: params
-	};
-	var url = "openapp.NASnano://virtual?params=" + JSON.stringify(appParams);
-	window.location.href = url;
+    // if (typeof window !== "undefined") {
+    //params.callback = Config.payUrl;
+    var appParams = {
+        category: "jump",
+        des: "confirmTransfer",
+        pageParams: params
+    };
+    var url = "openapp.NASnano://virtual?params=" + JSON.stringify(appParams);
+    window.location.href = url;
 
-	if (options.qrcode.showQRCode) {
-		showQRCode(JSON.stringify(appParams), options);
-	}
-	// }
+    if (options.qrcode.showQRCode) {
+        showQRCode(JSON.stringify(appParams), options);
+    }
+    // }
 }
 
 function showQRCode(params, options) {
-	QRCode.showQRCode(params, options.qrcode.container);
+    QRCode.showQRCode(params, options.qrcode.container);
 }
 
 module.exports = Pay;
@@ -170,30 +170,30 @@ module.exports = Pay;
 var QRCode = require('qrcode');
 
 var addCssRule = function () {
-	function createStyleSheet() {
-		var style = document.createElement('style');
-		style.type = 'text/css';
-		document.head.appendChild(style);
-		return style.sheet;
-	}
+    function createStyleSheet() {
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        document.head.appendChild(style);
+        return style.sheet;
+    }
 
-	var sheet = createStyleSheet();
+    var sheet = createStyleSheet();
 
-	return function (selector, rules, index) {
-		index = index || 0;
-		sheet.insertRule(selector + "{" + rules + "}", index);
-	};
+    return function (selector, rules, index) {
+        index = index || 0;
+        sheet.insertRule(selector + "{" + rules + "}", index);
+    };
 }();
 
 var createDeaultQRContainer = function () {
-	var canvas = document.createElement("canvas");
-	canvas.className = "qrcode";
-	var canvasStyle = `box-shadow: 2px 2px 12px lightgray;`;
-	addCssRule(".qrcode", canvasStyle);
+    var canvas = document.createElement("canvas");
+    canvas.className = "qrcode";
+    var canvasStyle = `box-shadow: 2px 2px 12px lightgray;`;
+    addCssRule(".qrcode", canvasStyle);
 
-	var qrcontainer = document.createElement("div");
-	qrcontainer.className = "qrcode-container";
-	var style = `text-align: center;
+    var qrcontainer = document.createElement("div");
+    qrcontainer.className = "qrcode-container";
+    var style = `text-align: center;
     background-color: #fff0;
     border-radius: 20px;
     width: 300px;
@@ -202,47 +202,47 @@ var createDeaultQRContainer = function () {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);`;
-	addCssRule(".qrcode-container", style);
-	qrcontainer.appendChild(canvas);
+    addCssRule(".qrcode-container", style);
+    qrcontainer.appendChild(canvas);
 
-	var background = document.createElement("div");
-	background.className = "qrcode-background";
-	style = `position:absolute;
-	left:0;
-	top:0;
-	z-index:100;
-	height:100%;
-	width:100%;
-	background-color: rgba(0, 0, 0, 0.4);`;
-	addCssRule(".qrcode-background", style);
-	background.appendChild(qrcontainer);
+    var background = document.createElement("div");
+    background.className = "qrcode-background";
+    style = `position:absolute;
+    left:0;
+    top:0;
+    z-index:100;
+    height:100%;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.4);`;
+    addCssRule(".qrcode-background", style);
+    background.appendChild(qrcontainer);
 
-	var body = document.getElementsByTagName("body");
-	body[0].appendChild(background);
+    var body = document.getElementsByTagName("body");
+    body[0].appendChild(background);
 
-	background.onclick = function () {
-		body[0].removeChild(background);
-	};
+    background.onclick = function () {
+        body[0].removeChild(background);
+    };
 
-	return canvas;
+    return canvas;
 };
 
 var showQRCode = function (content, container) {
-	if (typeof window === "undefined") {
-		return;
-	}
-	if (typeof container === "undefined") {
-		container = createDeaultQRContainer();
-	}
-	QRCode.toCanvas(container, content, function (error) {
-		if (error) {
-			console.error(error);
-		}
-	});
+    if (typeof window === "undefined") {
+        return;
+    }
+    if (typeof container === "undefined") {
+        container = createDeaultQRContainer();
+    }
+    QRCode.toCanvas(container, content, function (error) {
+        if (error) {
+            console.error(error);
+        }
+    });
 };
 
 module.exports = {
-	showQRCode: showQRCode
+    showQRCode: showQRCode
 };
 
 },{"qrcode":12}],6:[function(require,module,exports){
@@ -3197,85 +3197,85 @@ var hasOwn = Object.prototype.hasOwnProperty;
 var toStr = Object.prototype.toString;
 
 var isArray = function isArray(arr) {
-	if (typeof Array.isArray === 'function') {
-		return Array.isArray(arr);
-	}
+    if (typeof Array.isArray === 'function') {
+        return Array.isArray(arr);
+    }
 
-	return toStr.call(arr) === '[object Array]';
+    return toStr.call(arr) === '[object Array]';
 };
 
 var isPlainObject = function isPlainObject(obj) {
-	if (!obj || toStr.call(obj) !== '[object Object]') {
-		return false;
-	}
+    if (!obj || toStr.call(obj) !== '[object Object]') {
+        return false;
+    }
 
-	var hasOwnConstructor = hasOwn.call(obj, 'constructor');
-	var hasIsPrototypeOf = obj.constructor && obj.constructor.prototype && hasOwn.call(obj.constructor.prototype, 'isPrototypeOf');
-	// Not own constructor property must be Object
-	if (obj.constructor && !hasOwnConstructor && !hasIsPrototypeOf) {
-		return false;
-	}
+    var hasOwnConstructor = hasOwn.call(obj, 'constructor');
+    var hasIsPrototypeOf = obj.constructor && obj.constructor.prototype && hasOwn.call(obj.constructor.prototype, 'isPrototypeOf');
+    // Not own constructor property must be Object
+    if (obj.constructor && !hasOwnConstructor && !hasIsPrototypeOf) {
+        return false;
+    }
 
-	// Own properties are enumerated firstly, so to speed up,
-	// if last one is own, then all properties are own.
-	var key;
-	for (key in obj) { /**/ }
+    // Own properties are enumerated firstly, so to speed up,
+    // if last one is own, then all properties are own.
+    var key;
+    for (key in obj) { /**/ }
 
-	return typeof key === 'undefined' || hasOwn.call(obj, key);
+    return typeof key === 'undefined' || hasOwn.call(obj, key);
 };
 
 module.exports = function extend() {
-	var options, name, src, copy, copyIsArray, clone;
-	var target = arguments[0];
-	var i = 1;
-	var length = arguments.length;
-	var deep = false;
+    var options, name, src, copy, copyIsArray, clone;
+    var target = arguments[0];
+    var i = 1;
+    var length = arguments.length;
+    var deep = false;
 
-	// Handle a deep copy situation
-	if (typeof target === 'boolean') {
-		deep = target;
-		target = arguments[1] || {};
-		// skip the boolean and the target
-		i = 2;
-	}
-	if (target == null || (typeof target !== 'object' && typeof target !== 'function')) {
-		target = {};
-	}
+    // Handle a deep copy situation
+    if (typeof target === 'boolean') {
+        deep = target;
+        target = arguments[1] || {};
+        // skip the boolean and the target
+        i = 2;
+    }
+    if (target == null || (typeof target !== 'object' && typeof target !== 'function')) {
+        target = {};
+    }
 
-	for (; i < length; ++i) {
-		options = arguments[i];
-		// Only deal with non-null/undefined values
-		if (options != null) {
-			// Extend the base object
-			for (name in options) {
-				src = target[name];
-				copy = options[name];
+    for (; i < length; ++i) {
+        options = arguments[i];
+        // Only deal with non-null/undefined values
+        if (options != null) {
+            // Extend the base object
+            for (name in options) {
+                src = target[name];
+                copy = options[name];
 
-				// Prevent never-ending loop
-				if (target !== copy) {
-					// Recurse if we're merging plain objects or arrays
-					if (deep && copy && (isPlainObject(copy) || (copyIsArray = isArray(copy)))) {
-						if (copyIsArray) {
-							copyIsArray = false;
-							clone = src && isArray(src) ? src : [];
-						} else {
-							clone = src && isPlainObject(src) ? src : {};
-						}
+                // Prevent never-ending loop
+                if (target !== copy) {
+                    // Recurse if we're merging plain objects or arrays
+                    if (deep && copy && (isPlainObject(copy) || (copyIsArray = isArray(copy)))) {
+                        if (copyIsArray) {
+                            copyIsArray = false;
+                            clone = src && isArray(src) ? src : [];
+                        } else {
+                            clone = src && isPlainObject(src) ? src : {};
+                        }
 
-						// Never move original objects, clone them
-						target[name] = extend(deep, clone, copy);
+                        // Never move original objects, clone them
+                        target[name] = extend(deep, clone, copy);
 
-					// Don't bring in undefined values
-					} else if (typeof copy !== 'undefined') {
-						target[name] = copy;
-					}
-				}
-			}
-		}
-	}
+                    // Don't bring in undefined values
+                    } else if (typeof copy !== 'undefined') {
+                        target[name] = copy;
+                    }
+                }
+            }
+        }
+    }
 
-	// Return the modified object
-	return target;
+    // Return the modified object
+    return target;
 };
 
 },{}],11:[function(require,module,exports){
@@ -6481,87 +6481,87 @@ var BigNumber = require("bignumber.js");
 var NAS = "NAS";
 
 var NebPay = function (appKey, appSecret) {
-	this._pay = new Pay(appKey, appSecret);
+    this._pay = new Pay(appKey, appSecret);
 };
 
 var defaultOptions = {
-	goods: {
-		name: "",
-		desc: "",
-		orderId: "",
-		ext: ""
-	},
-	qrcode: {
-		showQRCode: false,
-		container: undefined
-	},
-	// callback is the return url after payment
-	callback: config.payUrl,
-	//listener：specify a listener function to handle payment feedback message(only valid for browser extension)
-	listener: undefined,
-	// if use nrc20pay ,should input nrc20 params like address, name, symbol, decimals
-	nrc20: undefined
+    goods: {
+        name: "",
+        desc: "",
+        orderId: "",
+        ext: ""
+    },
+    qrcode: {
+        showQRCode: false,
+        container: undefined
+    },
+    // callback is the return url after payment
+    callback: config.payUrl,
+    //listener：specify a listener function to handle payment feedback message(only valid for browser extension)
+    listener: undefined,
+    // if use nrc20pay ,should input nrc20 params like address, name, symbol, decimals
+    nrc20: undefined
 };
 
 NebPay.prototype = {
-	pay: function (to, value, options) {
-		var payload = {
-			type: "binary"
-		};
-		options = extend(defaultOptions, options);
-		return this._pay.submit(NAS, to, value, payload, options);
-	},
-	nrc20pay: function (currency, to, value, options) {
-		if (options.nrc20 && options.nrc20.decimals > 0) {
-			value = value || "0";
-			value = new BigNumber(value).times(new BigNumber(10).pow(options.nrc20.decimals)).toString(10);
-		}
-		var address = "";
-		if (options.nrc20 && options.nrc20.address) {
-			address = options.nrc20.address;
-		}
+    pay: function (to, value, options) {
+        var payload = {
+            type: "binary"
+        };
+        options = extend(defaultOptions, options);
+        return this._pay.submit(NAS, to, value, payload, options);
+    },
+    nrc20pay: function (currency, to, value, options) {
+        if (options.nrc20 && options.nrc20.decimals > 0) {
+            value = value || "0";
+            value = new BigNumber(value).times(new BigNumber(10).pow(options.nrc20.decimals)).toString(10);
+        }
+        var address = "";
+        if (options.nrc20 && options.nrc20.address) {
+            address = options.nrc20.address;
+        }
 
-		var args = [to, value];
-		var payload = {
-			type: "call",
-			function: "transfer",
-			args: JSON.stringify(args)
-		};
-		options = extend(defaultOptions, options);
-		return this._pay.submit(currency, address, "0", payload, options);
-	},
-	deploy: function (source, sourceType, args, options) {
-		var payload = {
-			type: "deploy",
-			source: source,
-			sourceType: sourceType,
-			args: args
-		};
-		options = extend(defaultOptions, options);
-		return this._pay.submit(NAS, "", "0", payload, options);
-	},
-	call: function (to, value, func, args, options) {
-		var payload = {
-			type: "call",
-			function: func,
-			args: args
-		};
-		options = extend(defaultOptions, options);
-		return this._pay.submit(NAS, to, value, payload, options);
-	},
-	simulateCall: function (to, value, func, args, options) {
-		var payload = {
-			type: "simulateCall",
-			function: func,
-			args: args
-		};
-		options = extend(defaultOptions, options);
-		return this._pay.submit(NAS, to, value, payload, options);
-	},
-	queryPayInfo: function (serialNumber) {
-		var url = config.payUrl + "/query?payId=" + serialNumber;
-		return http.get(url);
-	}
+        var args = [to, value];
+        var payload = {
+            type: "call",
+            function: "transfer",
+            args: JSON.stringify(args)
+        };
+        options = extend(defaultOptions, options);
+        return this._pay.submit(currency, address, "0", payload, options);
+    },
+    deploy: function (source, sourceType, args, options) {
+        var payload = {
+            type: "deploy",
+            source: source,
+            sourceType: sourceType,
+            args: args
+        };
+        options = extend(defaultOptions, options);
+        return this._pay.submit(NAS, "", "0", payload, options);
+    },
+    call: function (to, value, func, args, options) {
+        var payload = {
+            type: "call",
+            function: func,
+            args: args
+        };
+        options = extend(defaultOptions, options);
+        return this._pay.submit(NAS, to, value, payload, options);
+    },
+    simulateCall: function (to, value, func, args, options) {
+        var payload = {
+            type: "simulateCall",
+            function: func,
+            args: args
+        };
+        options = extend(defaultOptions, options);
+        return this._pay.submit(NAS, to, value, payload, options);
+    },
+    queryPayInfo: function (serialNumber) {
+        var url = config.payUrl + "/query?payId=" + serialNumber;
+        return http.get(url);
+    }
 };
 
 module.exports = NebPay;

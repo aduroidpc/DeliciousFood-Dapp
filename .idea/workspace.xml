@@ -2,34 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc13cfbe-eeb8-45ef-ad07-4f92ccaddfaf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery-3.3.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nebPay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nebulas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/account.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/neb-light.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/neb-light.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/neb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/neb.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/neb.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/request.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/transaction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/letter.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap-4.0.0-dist/js/bootstrap.min.js.map" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/jquery-3.3.1.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/nebPay.js" afterPath="$PROJECT_DIR$/dist/nebPay.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/nebulas.js" afterPath="$PROJECT_DIR$/dist/nebulas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,32 +49,26 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="nebPay.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/nebPay.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="-761">
+              <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="letter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-476">
+              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -86,6 +86,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>logo</find>
+      <find>add</find>
+      <find>emblems</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,8 +96,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/nebPay.js" />
         <option value="$PROJECT_DIR$/idnex.html" />
+        <option value="$PROJECT_DIR$/lib/nebPay.js" />
+        <option value="$PROJECT_DIR$/letter.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -107,10 +110,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1680" />
+    <option name="x" value="31" />
     <option name="y" value="22" />
-    <option name="width" value="1919" />
-    <option name="height" value="1058" />
+    <option name="width" value="1630" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -139,24 +142,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebulas-Dapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebulas-Dapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,9 +156,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/img" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,16 +257,18 @@
       <updated>1526006571309</updated>
       <workItem from="1526006574608" duration="42000" />
       <workItem from="1526006678148" duration="1779000" />
+      <workItem from="1526184586229" duration="3730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1821000" />
+    <option name="totallyTimeSpent" value="5551000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="22" width="1919" height="1058" extended-state="1" />
+    <frame x="31" y="22" width="1630" height="988" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13856691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16345556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -318,16 +313,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/img/logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nebPay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/neb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/letter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="-761">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
