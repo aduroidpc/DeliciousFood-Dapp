@@ -6,10 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        div h1{
+            color: white;
 
+        }
+        #content{
+            color: white;
+        }
+    </style>
 </head>
 
-<body>
+<body style="background:url(img/bg.png)">
 
 <script type="text/javascript" src="./dist/nebulas.js"></script>
 
@@ -19,28 +27,28 @@
 
 
 
-<div class="container">
+<div class="container" style="padding-top: 200px">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <div style="text-align: center">
+            <div style="text-align:center;">
                 <h1>美味的食物</h1>
             </div>
 
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="span12">
-                        <span class="label">分隔符</span>
-                        <div class="list-group">
+
+                        <div class="list-group" style="margin-top: 40px;">
                             <a class="list-group-item active">查询美味的食物</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="input-group col-md-3" style="margin-top:20px;margin-left:20px">
+            <div class="input-group" style="margin-top:20px;margin-left:20px">
                 <input type="text" class="form-control" placeholder="请输入食物名称" id=search_title />
                 <span class="input-group-btn">
-                        <button class="btn btn-info btn-search" id=search>查找</button>
+                        <button class="btn btn btn-success btn-search" id=search>查找</button>
 
                     </span>
             </div>
@@ -61,32 +69,32 @@
 
         <div id=author style="text-align: right"></div>
 
+        <div id="add_div" style="display: none">
 
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
 
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span12">
-                    <span class="label">分隔符</span>
-                    <div class="list-group">
-                        <a class="list-group-item active">立即发布</a>
+                        <div class="list-group">
+                            <a class="list-group-item active">立即发布</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="input-group" style="margin-left:20px">
-            <span class="input-group-addon">标题</span>
-            <input type="text" class="form-control" placeholder="输入标题" id=input_title>
-        </div>
-        <div class="input-group" style="margin-top:20px ;margin-left:20px">
-            <span class="input-group-addon">正文</span>
-            <input type="text" class="form-control" placeholder="输入正文" id=input_content>
-        </div>
-        <div  style="text-align: right;margin-top:20px ">
-            <button class="btn btn-info" id=post>提交</button>
-        </div>
+            <div class="input-group" style="margin-left:20px">
+                <span class="input-group-addon">标题</span>
+                <input type="text" class="form-control" placeholder="输入标题" id=input_title>
+            </div>
+            <div class="input-group" style="margin-top:20px ;margin-left:20px">
+                <span class="input-group-addon">正文</span>
+                <input type="text" class="form-control" placeholder="输入正文" id=input_content>
+            </div>
+            <div  style="text-align: right;margin-top:20px ">
+                <button class="btn btn-info" id=post>提交</button>
+            </div>
 
-
+        </div>
     </div>
 </div>
 </body>
@@ -133,10 +141,13 @@
             var result = resp.result;
 
             if (result === 'null') {
+                $("#add_div").show();
                 $('#content').text("没有发现该食物，你可以立即添加！");
                 $('#title').text("");
                 $('#author').text("");
                 return;
+            }else{
+                $("#add_div").hide();
             }
             console.log(result);
             result = JSON.parse(result);
